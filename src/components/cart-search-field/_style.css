@@ -1,0 +1,19 @@
+.container {
+    /* width: 60%; */
+    /* margin: 100px auto; */
+    border-radius: 6px;
+}
+.search-input {
+    /* width: 25ch;
+    margin: 1% */
+}
+
+.suggestions-section {
+    outline: 0.5px solid rgb(13, 55, 245);
+    /* padding: 20px 0; */
+    border-radius: 16px;
+}
+
+.listitem:hover {
+    background-color: grey;
+}

@@ -1,0 +1,42 @@
+.cart-section {
+    padding-top: 20px;
+
+    
+}
+.search-section {
+    padding: 30px;
+    width: 100%;
+    
+}
+.cart-section .heading {
+    padding: 10px 0;
+    text-align: center;
+   
+}
+.tabel-section {
+    width: 90%;
+    margin:0 5px 0 5px;
+   
+}
+.suggestions-section{
+background-color: #f9f9f9;
+position: absolute;
+overflow: visible;
+width: 11.5%;
+z-index: 1000;
+background-color: #f9f9f9;
+
+}
+.search-input{
+    width: 100%;
+    position: relative;   
+}
+
+.table-container{
+    position: relative;
+}
+
+.suggestions-section:hover{
+   
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);  
+}

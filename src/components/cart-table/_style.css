@@ -1,0 +1,23 @@
+.column-title {
+    background-color: rgb(196, 199, 199);
+}
+
+.tabel {
+    /* display: block; */
+    min-width: 700px;
+    /* width:500px; */
+}
+
+.info {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.tabel{
+    position:fixed;
+    overflow: visible;
+    
+}

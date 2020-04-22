@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.search-bar {
+  width: 30%;
+}
+.search-field {
+  margin: 0 auto;
+  width: 200px;
+}
