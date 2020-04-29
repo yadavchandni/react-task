@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -59,7 +58,7 @@ class CartTable extends React.Component {
     return (
       <div className={'table-container'}>
       <TableContainer component={Paper}>
-      <Table className={'tabel'} aria-label="spanning table">
+      <Table className={'tabel'} aria-label="spanning table" id="responsive-table">
         <TableHead >
          
           <TableRow className={'column-title '}>

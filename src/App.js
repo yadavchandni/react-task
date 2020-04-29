@@ -1,43 +1,34 @@
 import React from 'react';
 import './App.css';
-import Cart from  './cart';
-import NavBar from  './components/navbar';
+import AdminDashboard  from './dashboard/admin-dashboard/dashboard';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-// import { BrowserRouter, Route, Link } from "react-router-dom";
+// import { Container} from 'react-bootstrap';
 
-import {Switch,Route} from 'react-router-dom';
-import AddProduct from './components/addproduct/AddProduct';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
-
+      isAddProduct: false,
+      error: null,
+      response: {}
     }
+   
   }
+
+  onCreate() {
+    this.setState({ isAddProduct: true });
+  }
+  
 
   render() {
     console.log('App Render')
     return (
       <>
-      <React.Fragment>
-          
-          <Switch>
-     
-
-                <Route path='/addproduct' components={AddProduct} />
-
-               
-          </Switch>
-       
-      </React.Fragment>
-      
-       
-
-       
-        
+        <AdminDashboard />            
       </>
-      
+
     );
   }
 

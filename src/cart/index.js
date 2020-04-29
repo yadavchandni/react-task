@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './_style.css';
 import CartTable from '../components/cart-table';
 import CartSearchField from '../components/cart-search-field';

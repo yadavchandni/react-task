@@ -3,12 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import AddProduct from '../addproduct/AddProduct';
-// import { BrowserRouter, Route, Link } from "react-router-dom";
-
-import {Switch,Route} from 'react-router-dom';
+//import IconButton from '@material-ui/core/IconButton';
+//mport MenuIcon from '@material-ui/icons/Menu';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import AddProduct from '../addproduct';
+import Cart from  '../../cart';
+import './_style.css';
+import  Isuues from '../../dashboard2/issues/index';
+import Admin from '../../dashboard/admin-dashboard/dashboard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,29 +26,37 @@ export default function DenseAppBar() {
 
   return (
     <div className={classes.root}>
+       <Router>
+
       <AppBar position="static">
         <Toolbar variant="dense">
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+         <Typography variant="h6" color="inherit">
+         <Link to={'/addproduct'} className="nav-link" style={{paddingLeft:"5rem"}}>AddProduct</Link>
+          </Typography>
           <Typography variant="h6" color="inherit">
-            Cart
-          </Typography>     
-          
-          <React.Fragment>
-          
-            <Switch>
-       
-
-                  <Route path='/addproduct' components={AddProduct} />
-
-                 
-            </Switch>
-         
-        </React.Fragment>    
-
+          <Link to={'/cart'} className="nav-link">Cart</Link>
+          </Typography>
+          <Typography variant="h6" color="inherit">
+          <Link to={'/admin'} className="nav-link">Admin</Link>
+          </Typography>
+          <Typography variant="h6" color="inherit">
+          <Link to={'/analytics'} className="nav-link">issues </Link>
+          </Typography>
         </Toolbar>
+        
       </AppBar>
+      
+     
+        <div>
+          <Switch>
+
+              <Route path='/addproduct' component={AddProduct} />
+              <Route path='/cart' component={Cart} />
+              <Route path='/admin' component={Admin} />
+              <Route path='/analytics' component={ Isuues} />
+          </Switch>
+        </div>
+      </Router> 
 
       
     </div>

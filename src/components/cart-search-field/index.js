@@ -84,6 +84,7 @@ static defaultProps = {
             { this.state.showSuggestions && 
             <div className={'suggestions-section'}>
                 <div className={'classes.demo'}>
+                  
                     <List dense={dense}>
                     {this.state.suggestions && this.state.suggestions.map((item, key) => {
                         return (<ListItem className={'listitem'}
