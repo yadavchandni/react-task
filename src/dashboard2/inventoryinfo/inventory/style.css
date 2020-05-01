@@ -1,0 +1,48 @@
+.select-field {
+    /* background-color: red; */
+    width: 100%;
+ 
+    
+}
+
+.btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+/*  
+    #asynchronous-demo{
+        padding: 0.2px;
+    } */
+
+   
+
+    .inventory-info{
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-right: 5%;      
+        /* box-shadow: 2px 4px 8px 0 rgba(0.2,0,0,0.2); */
+
+    }
+    
+
+   .controllable-states-select{
+        width: 100%;
+        
+    }
+
+    .input-group-prepend{
+        width: 100% ;              
+    }
+    .input-group-text{
+        background-color: skyblue;
+    }
+    hr.new4 {
+        border: 1px solid skyblue
+      }
+    .icon-superscript{
+        color: skyblue;
+    }
+    .form-control{
+        /* border-color: black; */
+        padding: 28px;
+    }

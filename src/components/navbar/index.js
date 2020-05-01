@@ -6,11 +6,12 @@ import Typography from '@material-ui/core/Typography';
 //import IconButton from '@material-ui/core/IconButton';
 //mport MenuIcon from '@material-ui/icons/Menu';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import AddProduct from '../addproduct';
-import Cart from  '../../cart';
+// import AddProduct from '../addproduct';
+// import Cart from  '../../cart';
 import './_style.css';
-import  Isuues from '../../dashboard2/issues/index';
-import Admin from '../../dashboard/admin-dashboard/dashboard';
+// import  NavbarTab from '../../dashboard2/navigationtab/index';
+// import AdminDasboard from '../Admindashboardtab/admindashboardtab';
+import AdminPanel from '../../dashboard/admin-dashboard/dashboard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,39 +27,22 @@ export default function DenseAppBar() {
 
   return (
     <div className={classes.root}>
-       <Router>
-
-      <AppBar position="static">
-        <Toolbar variant="dense">
-         <Typography variant="h6" color="inherit">
-         <Link to={'/addproduct'} className="nav-link" style={{paddingLeft:"5rem"}}>AddProduct</Link>
-          </Typography>
-          <Typography variant="h6" color="inherit">
-          <Link to={'/cart'} className="nav-link">Cart</Link>
-          </Typography>
-          <Typography variant="h6" color="inherit">
-          <Link to={'/admin'} className="nav-link">Admin</Link>
-          </Typography>
-          <Typography variant="h6" color="inherit">
-          <Link to={'/analytics'} className="nav-link">issues </Link>
-          </Typography>
-        </Toolbar>
-        
-      </AppBar>
-      
-     
-        <div>
-          <Switch>
-
-              <Route path='/addproduct' component={AddProduct} />
-              <Route path='/cart' component={Cart} />
-              <Route path='/admin' component={Admin} />
-              <Route path='/analytics' component={ Isuues} />
-          </Switch>
-        </div>
-      </Router> 
-
-      
+        <div>        
+        <Router>
+          <AppBar position="static" style={{backgroundColor:"#fcfcfc"}}>
+            <Toolbar variant="dense">                
+              <Typography variant="h6" >
+              <Link to={'/admin'} target className="nav-link"></Link>
+              </Typography>
+            </Toolbar>       
+          </AppBar>           
+            <div>
+              <Switch>              
+                  <Route path='/admin' component={AdminPanel} />            
+              </Switch>
+          </div>
+      </Router>   
+        </div>    
     </div>
   );
 }

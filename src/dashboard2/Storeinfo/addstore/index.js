@@ -5,9 +5,9 @@ import Grid from '@material-ui/core/Grid';
 export default class index extends Component {
     render() {
         return (
-            <div>  
-                {/* <Navigation /> */}
-                <div>
+            <div className="container">               
+                <div className="row">
+
                     <form className="login100-form validate-form" >
                         <div className="login100-form" style={{backgroundColor:"white"}}>
                        <span className="login100-form-title">
@@ -69,86 +69,81 @@ export default class index extends Component {
                             <Grid item xs>                           
                             </Grid>
                         </Grid>
+                         <br></br>
+                        <span className="login100-form-title">
+                        Business settings:-
+                        </span>
+                        <Grid container spacing={3}>
+                            
+                            <Grid item xs>
+                                <div className="wrap-input100 validate-input" data-validate>
+                                    <input className="input100" type="text" name="reg_email" size={50} required />
+                                    <span className="focus-input100" data-placeholder="GSTIN Number" />
+                                </div>
+                            </Grid>
+                            <Grid item xs>
+                                <div className="wrap-input100 validate-input" data-validate>
+                                    <input className="input100" type="text" name="reg_email" size={50} required />
+                                    <span className="focus-input100" data-placeholder="Business PAN Number" />
+                                </div> 
+                            </Grid>
+                            <Grid item xs>                    
+                            </Grid>
+                        </Grid>
                         <br></br>
-             <span className="login100-form-title">
-               Business settings:-
-            </span>
-            <Grid container spacing={3}>
-            
-            <Grid item xs>
-            <div className="wrap-input100 validate-input" data-validate>
-                <input className="input100" type="text" name="reg_email" size={50} required />
-                <span className="focus-input100" data-placeholder="GSTIN Number" />
-              </div>
-            </Grid>
-            <Grid item xs>
-            <div className="wrap-input100 validate-input" data-validate>
-                <input className="input100" type="text" name="reg_email" size={50} required />
-                <span className="focus-input100" data-placeholder="Business PAN Number" />
-              </div> 
-            </Grid>
-            <Grid item xs>
-           
-            </Grid>
-          </Grid>
-          <br></br>
-          <span className="login100-form-title">
-                 Owner profile:-
-            </span>
-            <Grid container spacing={3}>
-            
-            <Grid item xs>
-            <div className="wrap-input100 validate-input" data-validate>
-                <input className="input100" type="text" name="reg_email" size={50} required />
-                <span className="focus-input100" data-placeholder="First name" />
-              </div>
-            </Grid>
-            <Grid item xs>
-            <div className="wrap-input100 validate-input" data-validate>
-                <input className="input100" type="text" name="reg_email" size={50} required />
-                <span className="focus-input100" data-placeholder="Last name" />
-              </div> 
-            </Grid>
-            <Grid item xs>
-            <div className="wrap-input100 validate-input" data-validate>
-                <input className="input100" type="text" name="reg_email" size={50} required />
-                <span className="focus-input100" data-placeholder="Mobile Number" />
-              </div> 
-            </Grid>
-          </Grid>
+                        <span className="login100-form-title">
+                             Owner profile:-
+                         </span>
+                        <Grid container spacing={3}>
+                            <Grid item xs>
+                                <div className="wrap-input100 validate-input" data-validate>
+                                    <input className="input100" type="text" name="reg_email" size={50} required />
+                                    <span className="focus-input100" data-placeholder="First name" />
+                                </div>
+                            </Grid>
+                            <Grid item xs>
+                                <div className="wrap-input100 validate-input" data-validate>
+                                    <input className="input100" type="text" name="reg_email" size={50} required />
+                                    <span className="focus-input100" data-placeholder="Last name" />
+                                </div> 
+                            </Grid>
+                            <Grid item xs>
+                                <div className="wrap-input100 validate-input" data-validate>
+                                    <input className="input100" type="text" name="reg_email" size={50} required />
+                                    <span className="focus-input100" data-placeholder="Mobile Number" />
+                                </div> 
+                             </Grid>
+                        </Grid>
+                        <Grid container spacing={3}>                            
+                            <Grid item xs>
+                            <div className="wrap-input100 validate-input" data-validate>
+                                <input className="input100" type="text" name="reg_email" size={50} required />
+                                <span className="focus-input100" data-placeholder="E-mail Id" />
+                            </div>
+                            </Grid>
+                            <Grid item xs>
+                                <div className="wrap-input100 validate-input" data-validate>
+                                    <input className="input100" type="text" name="reg_email" size={50} required />
+                                    <span className="focus-input100" data-placeholder="Password" />
+                                </div> 
+                            </Grid>
+                            <Grid item xs>         
+                            </Grid>
+                        </Grid>
 
-          <Grid container spacing={3}>
-            
-            <Grid item xs>
-            <div className="wrap-input100 validate-input" data-validate>
-                <input className="input100" type="text" name="reg_email" size={50} required />
-                <span className="focus-input100" data-placeholder="E-mail Id" />
-              </div>
-            </Grid>
-            <Grid item xs>
-            <div className="wrap-input100 validate-input" data-validate>
-                <input className="input100" type="text" name="reg_email" size={50} required />
-                <span className="focus-input100" data-placeholder="Password" />
-              </div> 
-            </Grid>
-            <Grid item xs>         
-            </Grid>
-          </Grid>
-
-            <div className="container-login100-form-btn">
-                <div className="wrap-login100-form-btn">
-                  <div className="login100-form-bgbtn" />
-                  <button className="login100-form-btn" type="submit" >
-                    Register
-                  </button>
-                </div>
-              </div>
-              </div>
-          </form>
-      </div>
-     
-      
+                        <div className="container-login100-form-btn">
+                            <div className="wrap-login100-form-btn">
+                            <div className="login100-form-bgbtn" />
+                            <button className="login100-form-btn" type="submit" >
+                                Register
+                            </button>
+                            </div>
+                        </div>
+                     </div>
+                </form>
+             </div>      
      </div>
-        )
+
+        );
     }
 }

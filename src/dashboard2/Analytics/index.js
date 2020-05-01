@@ -7,7 +7,11 @@ export default class index extends Component {
             <div> 
                 <h2>Analytics</h2>
                 <hr />
-                <Barchart />   
+                <Barchart /> 
+                <hr />
+                <Barchart />  
+                <hr />
+                <Barchart />    
             </div>
         )
     }

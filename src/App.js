@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import AdminDashboard  from './dashboard/admin-dashboard/dashboard';
 import "bootstrap/dist/css/bootstrap.min.css";
-
-// import { Container} from 'react-bootstrap';
+// import Navbar from './components/navbar/index';
+// import UsersInfo from './dashboard2/UsersInfo/users/index';
+import Inventory from './dashboard2/inventoryinfo/inventory/index';
 
 
 class App extends React.Component {
@@ -26,7 +26,12 @@ class App extends React.Component {
     console.log('App Render')
     return (
       <>
-        <AdminDashboard />            
+        {/* <Navbar /> */}
+
+        {/* <UsersInfo /> */}
+
+        <Inventory />
+        
       </>
 
     );

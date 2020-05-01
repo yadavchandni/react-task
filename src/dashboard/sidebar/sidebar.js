@@ -59,9 +59,9 @@ export default function CustomizedMenus() {
         return (
             <div>
                    {/* sidebar start */}
-                   <div>
+                   <div className="row" style={{backgroundColor:"white"}}>
                           <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
-                          <label for="openSidebarMenu" className="sidebarIconToggle">
+                          <label for="openSidebarMenu" className="sidebarIconToggle" style={{backgroundColor:"Black"}}>
                               <div className="spinner diagonal part-1"></div>
                               <div className="spinner horizontal"></div>
                               <div className="spinner diagonal part-2"></div>
