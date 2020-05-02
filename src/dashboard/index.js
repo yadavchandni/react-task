@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
-import Cardsection from '../cardsection/index';
-import Sidebarsection from '../sidebar/sidebar';
-import  './style.css';
+import Cardsection from './cardsection/index';
+import Sidebarsection from './sidebar/sidebar';
+// import  './style.css';
 export default class index extends Component {
   render() {
     return (
@@ -10,6 +10,7 @@ export default class index extends Component {
         <div>
             {/* sidebar section  */}
             <Sidebarsection />
+            
             {/* card section  */}
              <Cardsection />   
          </div>      

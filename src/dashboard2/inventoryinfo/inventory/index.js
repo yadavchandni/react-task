@@ -296,7 +296,7 @@ export default function Asynchronous() {
             </div>
             <br></br>
             <div className="row">
-              <div className="col-md-4">
+              <div className="col-md-8">
                   <label>Enable Stock Management at product level</label>
                   <div className="form-group bmd-form-group">           
                      <label className="bmd-label-floating"> Product Description.</label>

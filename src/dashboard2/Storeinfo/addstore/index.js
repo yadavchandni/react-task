@@ -7,8 +7,7 @@ export default class index extends Component {
         return (
             <div className="container">               
                 <div className="row">
-
-                    <form className="login100-form validate-form" >
+                   <form className="login100-form validate-form" >
                         <div className="login100-form" style={{backgroundColor:"white"}}>
                        <span className="login100-form-title">
                             Store info fields 
