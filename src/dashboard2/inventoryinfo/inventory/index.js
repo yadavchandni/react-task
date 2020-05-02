@@ -168,11 +168,11 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import InfoIcon from '@material-ui/icons/Info';
 import './style.css';
 // import Icon from '@material-ui/core/Icon';
-import Chip from '@material-ui/core/Chip';
+// import Chip from '@material-ui/core/Chip';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
-
+import SelectField from  './selectfield';
+import ProductTypeSize from './Productsize';
 
 
 //select Unit section :
@@ -240,7 +240,7 @@ export default function Asynchronous() {
   return (
 
     <div className="card-body">
-      <h2>Add Product</h2>
+      <h2 className="addproduct-heading">Add Product</h2>
          <div className=" inventory-info mt-5">
             <div className="row">
                 {/* sku section */}
@@ -460,7 +460,7 @@ export default function Asynchronous() {
                 <div className="col-md-4">
                     <div className="form-group bmd-form-group">
                       <br></br>
-                        <FormControlLabel control={<Checkbox name="checkedC" />} />
+                        <FormControlLabel control={<Checkbox name="checkedC" color="primary" />} />
                          <label className="bmd-label-floating">Enable Product Dicription IMI and serial Number  *:</label>
                          <InfoIcon className="fa fa-info-circle" className="icon-superscript"  />                     
                       </div>
@@ -471,7 +471,7 @@ export default function Asynchronous() {
                   <div className="col-md-4">
                       <div className="form-group bmd-form-group">
                       <br></br>
-                        <FormControlLabel control={<Checkbox name="checkedC" />} />
+                        <FormControlLabel control={<Checkbox name="checkedC"  color="primary" />} />
                          <label className="bmd-label-floating"> Not for seeling:</label>
                          <InfoIcon className="fa fa-info-circle" className="icon-superscript"  />                                                 
                       </div>
@@ -516,15 +516,142 @@ export default function Asynchronous() {
                   </div>                                                
             </div>
             <br></br>
-            <div className="col-md-4">
+            <div className="row">
+                 <div className="col-md-4">
                       <div className="form-group bmd-form-group">                
-                        <FormControlLabel control={<Checkbox name="checkedC" />} />
+                        <FormControlLabel control={<Checkbox name="checkedC"  color="primary" />} />
                          <label className="bmd-label-floating"> Disable Woocommerce sync:</label>
                          <InfoIcon className="fa fa-info-circle" className="icon-superscript"  />                                                 
                       </div>
                   </div> 
-                  {/* third section */}
+              
+            </div>
+                  {/* third section application */}
                   <hr className="new4" />
+
+          <br></br>
+          <div className="row">
+            <div className="col-md-4">
+                <div className="form-group bmd-form-group">
+                  <label className="bmd-label-floating">Applicable Tax*:</label>
+                        <Autocomplete
+                          id="asynchronous-demo"               
+                          open={open}
+                          onOpen={() => {
+                              setOpen(true);
+                          }}
+                          onClose={() => {
+                              setOpen(false);
+                          }}
+                          getOptionSelected={(option, value) => option.name === value.name}
+                          getOptionLabel={(option) => option.name}
+                          options={options}
+                          loading={loading}
+                          renderInput={(params) => (
+                              <TextField
+                              {...params}
+                              label="Enter Barcode Name"
+                              variant="outlined"
+                              InputProps={{
+                                  ...params.InputProps,
+                                  endAdornment: (
+                                  <React.Fragment>
+                                      {loading ? <CircularProgress   /> : null}
+                                      {params.InputProps.endAdornment}
+                                  </React.Fragment>
+                                  ),
+                              }}
+                              />
+                             )}
+                          />
+                </div>                        
+            </div>
+            {/* selling price type tax */}
+            <div className="col-md-4">
+                <div className="form-group bmd-form-group">
+                  <label className="bmd-label-floating">Selling Price Type Tax*:</label>
+                       <SelectField />
+                </div>                        
+            </div>
+          </div>
+          <br></br>
+          {/* product type */}
+          <div className="row">                                          
+            {/* product size type tax */}
+            <div className="col-md-4">
+                <div className="form-group bmd-form-group">
+                  <label className="bmd-label-floating">ProductType*:</label>
+                       <ProductTypeSize />
+                </div>                        
+            </div>
+          </div>
+          <br></br>
+          {/* Divider bar */}
+          <div className="row appilacable-divider-bar" >                                          
+            {/* product size type tax */}
+            <div className="col-md-4">              
+               <label className="bmd-label-floating " style={{color:"white"}}>Default Purchase Price*:</label>                                      
+            </div>
+            <div className="col-md-3">               
+               <label className="bmd-label-floating verticalLine">X Margin(%):</label>                                       
+            </div>
+            <div className="col-md-2">                
+                <label className="bmd-label-floating verticalLine">Default Selling Price</label>                                      
+            </div>
+            <div className="col-md-3">                
+                <label className="bmd-label-floating verticalLine">Product Image</label>                                                       
+            </div>
+          </div>
+          <br></br>
+          {/* tax section  */}
+          <div className="row">                                          
+            {/* product size type tax */}
+            <div className="col-md-2">
+                <div className="form-group bmd-form-group">
+                  <label className="bmd-label-floating">Exc Tax*:</label>
+                  <input type="text" className="form-control" id="outlined-basic" placeholder="Please Enter Tax" required />  
+                </div>                        
+            </div>
+            <div className="col-md-2">
+                <div className="form-group bmd-form-group">
+                  <label className="bmd-label-floating">Inc Tax*:</label>
+                  <input type="text" className="form-control" id="outlined-basic" placeholder="Please Enter Tax" required />  
+                </div>                        
+            </div>
+            <div className="col-md-3">
+                <div className="form-group bmd-form-group">
+                  <label className="bmd-label-floating"></label>
+                  <input type="text" className="form-control" id="outlined-basic" placeholder="Please Enter Tax" required />  
+                </div>                        
+            </div>
+            <div className="col-md-2">
+                <div className="form-group bmd-form-group">
+                  <label className="bmd-label-floating">Exc Tax*:</label>
+                  <input type="text" className="form-control" id="outlined-basic" placeholder="Please Enter Tax" required />  
+                </div>                        
+            </div>
+            <div className="col-md-3">
+                <div className="form-group bmd-form-group">
+                  <label className="bmd-label-floating">Product Image*:</label>
+                     
+                      <input 
+                        accept="image/*"
+                        className="uploadinputfeild "
+                        id="contained-button-file"
+                        multiple
+                        type="file"
+                      />                   
+                </div>                        
+            </div>
+          </div>
+          <br></br>
+          <div className="row">
+            <div className="col-md-12">
+            <center>
+            <button  type="button" className="btn purple-gradient save-button">Save</button>
+            </center>           
+            </div>
+          </div>
         </div>
     </div>
   );

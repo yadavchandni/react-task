@@ -1,10 +1,7 @@
 .select-field {
     /* background-color: red; */
-    width: 100%;
- 
-    
+    width: 100%;   
 }
-
 .btn:hover {
     -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
     box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
@@ -15,7 +12,7 @@
     } */
 
    
-
+/* main div */
     .inventory-info{
         padding-top: 1%;
         padding-left: 5%;
@@ -23,7 +20,12 @@
         /* box-shadow: 2px 4px 8px 0 rgba(0.2,0,0,0.2); */
 
     }
-    
+    /* add product heading  */
+    .addproduct-heading{
+        text-align: left;
+        padding-left: 60px;
+    }
+    /* autocomplete select bar */
 
    .controllable-states-select{
         width: 100%;
@@ -45,4 +47,38 @@
     .form-control{
         /* border-color: black; */
         padding: 28px;
+    }
+    .appilacable-divider-bar{
+        background-color: #35c77e;
+    }
+   /* .vertical-line {
+        border-left: 6px black;
+        height: 50px;
+        position: absolute;
+        left: 70%;
+       
+        top: 0;
+    } */
+
+/* vertical line */
+   .verticalLine {
+    border-left: 2px solid #ffffff;
+    height: 20px;
+    height: 20px;
+    padding-left: 29px;
+    color: white;
+
+    }
+
+    /* uploadinputfeild */
+    .uploadinputfeild{
+        padding: 15px;
+    }
+
+    /* save botton */
+    .save-button{
+       
+        padding: 1% 2%;
+        border-radius: 45px ;
+        font-size: 23px;
     }
