@@ -137,17 +137,7 @@
 //                         </div>
                         
                         
-//                         <div className="row">
-//                             <div className="col-md-4">
-//                             <div className="form-group">
-//                                 <label>About Me</label>
-//                                 <div className="form-group bmd-form-group">
-//                                 <label className="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-//                                 <textarea className="form-control" rows={5} defaultValue={""} />
-//                                 </div>
-//                             </div>
-//                             </div>
-//                         </div>
+//                         
 //                         <div className="text-center">
 //                             <button type="button" className="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign up</button>
 //                         </div>
@@ -454,6 +444,16 @@ export default function Asynchronous() {
                       </div>
                   </div>                                        
             </div>
+            <br></br>
+            <div className="row">
+              <div className="col-md-4">
+                  <label>Enable Stock Management at product level</label>
+                  <div className="form-group bmd-form-group">           
+                     <label className="bmd-label-floating"> Product Description.</label>
+                      <textarea className="form-control" rows={5} defaultValue={""} />
+                  </div>                                       
+               </div>         
+            </div>
             <hr className="new4" />
 
             <div className="row">                
@@ -461,7 +461,7 @@ export default function Asynchronous() {
                     <div className="form-group bmd-form-group">
                       <br></br>
                         <FormControlLabel control={<Checkbox name="checkedC" color="primary" />} />
-                         <label className="bmd-label-floating">Enable Product Dicription IMI and serial Number  *:</label>
+                         <label className="bmd-label-floating">Enable Product Description IMI and serial Number  *:</label>
                          <InfoIcon className="fa fa-info-circle" className="icon-superscript"  />                     
                       </div>
                   </div>
