@@ -6,16 +6,16 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import AddProduct from '../addproduct';
-import Cart from '../../cart';
-import Admin from '../../dashboard/admin-dashboard/dashboard';
+import AnalticalTab from '../Analytics/index';
+import Usersinfo from '../UsersInfo/users/index';
+import Issues from '../issues/index';
 
-function TabPanel(props) {
+function NavigationTab(props) {
   const { children, value, index, ...other } = props;
 
   return (
     <div
-      role="tabpanel"
+      role="NavigationTab"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
@@ -30,7 +30,7 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
+NavigationTab.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleTabs() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -62,20 +62,20 @@ export default function SimpleTabs() {
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="Add Product" {...a11yProps(0)} />
-          <Tab label="Cart" {...a11yProps(1)} />
-          <Tab label="Admin Panel" {...a11yProps(2)} />
+          <Tab label="Analytics" {...a11yProps(0)} />
+          <Tab label="Users" {...a11yProps(1)} />
+          <Tab label="Isuues" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        <AddProduct />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Cart/>
-      </TabPanel>
-      {/* <TabPanel value={value} index={2}>
-        <Admin />
-      </TabPanel> */}
+      <NavigationTab value={value} index={0}>
+        <AnalticalTab />
+      </NavigationTab>
+      <NavigationTab value={value} index={1}>
+        <Usersinfo />
+      </NavigationTab>
+      <NavigationTab value={value} index={2}>
+        <Issues />
+      </NavigationTab>
     </div>
   );
 }

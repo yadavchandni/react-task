@@ -7,7 +7,7 @@ import {
   KeyboardTimePicker,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
-import '../../../Storeinfo/addstore/style.css'
+import '../../../Storeinfo/addStoreForm/style.css'
 
 export default function MaterialUIPickers() {
   // The first commit of Material-UI

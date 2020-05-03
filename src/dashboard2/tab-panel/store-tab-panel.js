@@ -7,15 +7,15 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import AnalticalTab from '../Analytics/index';
-import StoreInfo  from '../Storeinfo/addstore/index';
+import AddStoreForm  from '../Storeinfo/addStoreForm';
 import Issues from '../issues/index';
 
-function TabPanel(props) {
+function NavigationTab(props) {
   const { children, value, index, ...other } = props;
 
   return (
     <div
-      role="tabpanel"
+      role="NavigationTab"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
@@ -30,7 +30,7 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
+NavigationTab.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleTabs() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -67,15 +67,15 @@ export default function SimpleTabs() {
           <Tab label="Isuues" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
+      <NavigationTab value={value} index={0}>
         <AnalticalTab />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <StoreInfo />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
+      </NavigationTab>
+      <NavigationTab value={value} index={1}>
+        <AddStoreForm />
+      </NavigationTab>
+      <NavigationTab value={value} index={2}>
         <Issues />
-      </TabPanel>
+      </NavigationTab>
     </div>
   );
 }

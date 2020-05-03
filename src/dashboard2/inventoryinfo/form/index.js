@@ -27,7 +27,7 @@ function sleep(delay = 0) {
 
 
 
-export default function Asynchronous() {
+export default function Form() {
 
   //barcode section
   const [open, setOpen] = React.useState(false);
@@ -79,9 +79,15 @@ export default function Asynchronous() {
   };
   return (
     //Inventory Module:
-    <div className="card-body">
-      <h2 className="addproduct-heading">Add Product</h2>
-         <div className=" inventory-info mt-5">
+
+    <div className="card-body">     
+         <div className=" inventory-info">
+        <div>
+          <h2 className="addproduct-heading">
+              Add Product*:
+          </h2>
+        </div>
+        <br></br>
             <div className="row">
                 {/* sku section */}
                 <div className="col-md-4">

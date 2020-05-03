@@ -1,7 +1,6 @@
 
 #sidebarMenu {
-  
-  position: fixed;
+  margin-top: 45px;
   left: 0;
   width: auto;
   z-index: 1000;
@@ -14,7 +13,7 @@
 }
 .sidebarMenuInner {
   margin: 0;
-  padding: 0;
+  padding: 2px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebarMenuInner li {
@@ -118,8 +117,8 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .user-pic {
   float: left;
   width: 60px;
-  padding: 2px;
-  border-radius: 12px;
+  padding: 1px;
+  border-radius: 50px;
   margin-right: 15px;
   overflow: hidden;
 }

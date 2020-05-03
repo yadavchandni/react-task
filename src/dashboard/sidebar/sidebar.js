@@ -60,8 +60,9 @@ export default function CustomizedMenus() {
             <div>
                    {/* sidebar start */}
                    <div className="row" style={{backgroundColor:"white"}}>
+                     
                           <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
-                          <label for="openSidebarMenu" className="sidebarIconToggle" style={{backgroundColor:"Black"}}>
+                          <label htmlFor="openSidebarMenu" className="sidebarIconToggle" style={{backgroundColor:"Black"}}>
                               <div className="spinner diagonal part-1"></div>
                               <div className="spinner horizontal"></div>
                               <div className="spinner diagonal part-2"></div>
@@ -87,7 +88,7 @@ export default function CustomizedMenus() {
                            </div>               
                                 {/*  sidebar Menu Inner */}                                                           
                                 <ul className="sidebarMenuInner" >
-                                    <li class="header-menu">
+                                    <li className="header-menu">
                                         <span>General</span>
                                     </li>
                                     <li className="sidebar-title-ui-li"
