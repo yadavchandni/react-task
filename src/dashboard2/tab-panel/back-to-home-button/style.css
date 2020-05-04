@@ -1,0 +1,6 @@
+.back-button-icon{
+    background: white;
+    border-radius: 50px;
+    box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+    font-size: 100px;
+}

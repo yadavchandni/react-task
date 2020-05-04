@@ -9,7 +9,11 @@ import Box from '@material-ui/core/Box';
 import AnalticalTab from '../Analytics/index';
 import InventoryTab  from '../inventoryinfo/form';
 import Issues from '../issues/index';
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+// custome css
+import '../tab-panel/back-to-home-button/style.css';
 function NavigationTab(props) {
   const { children, value, index, ...other } = props;
 
@@ -52,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleTabs() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(2);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -60,20 +64,25 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static">     
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="Analytics" {...a11yProps(0)} />
-          <Tab label="Inventory" {...a11yProps(1)} />
-          <Tab label="Isuues" {...a11yProps(2)} />
+            {/* back to home button  */}
+          <Button>
+              <Link to={'/'} ><ArrowBackIcon className="back-button-icon" /></Link>
+            </Button>
+          <Tab label="Analytics" {...a11yProps(1)} />
+          <Tab label="Inventory" {...a11yProps(2)} />
+          <Tab label="Isuues" {...a11yProps(3)} />
+         
         </Tabs>
       </AppBar>
-      <NavigationTab value={value} index={0}>
+      <NavigationTab value={value} index={1}>
         <AnalticalTab />
       </NavigationTab>
-      <NavigationTab value={value} index={1}>
+      <NavigationTab value={value} index={2}>
         <InventoryTab />
       </NavigationTab>
-      <NavigationTab value={value} index={2}>
+      <NavigationTab value={value} index={3}>
         <Issues />
       </NavigationTab>
     </div>

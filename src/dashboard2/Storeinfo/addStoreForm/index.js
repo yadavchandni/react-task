@@ -3,6 +3,7 @@ import './style.css';
 import Grid from '@material-ui/core/Grid';
 //import Navigation from '../../dashboard2navbar/navbar2/index';
 import '../../inventoryinfo/form/style.css';
+import FindStoreSearchBar from '../findstore';
 
 export default class AddStoreForm extends Component {
     render() {
@@ -150,6 +151,13 @@ export default class AddStoreForm extends Component {
                         <button  type="button" className="btn purple-gradient save-button">Register</button>
                         </center>           
                         </div>
+                    </div>
+                    <br></br> <br></br>
+                    {/* find store search bar */}
+                    <hr className="new4" />
+                    <br></br>
+                    <div className="row">
+                        <FindStoreSearchBar />
                     </div>
                     </div>
                     </div>
