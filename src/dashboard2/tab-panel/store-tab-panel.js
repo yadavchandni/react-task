@@ -70,9 +70,9 @@ export default function SimpleTabs() {
             <Button>
               <Link to={'/'} ><ArrowBackIcon className="back-button-icon" /></Link>
             </Button>
-          <Tab label="Analytics" {...a11yProps(1)} />
-          <Tab label="Store Info" {...a11yProps(2)} />
-          <Tab label="Isuues" {...a11yProps(3)} />
+          <Tab component={Link} exact to="/store/analytics" activeClassName="selectedLink"  strict  label="Analytics" {...a11yProps(1)} style={{color:"white",textDecoration:"none"}} />
+         <Tab component={Link} exact to="/store/" label="Store Info" {...a11yProps(2)} style={{color:"white",textDecoration:"none"}} /> 
+          <Tab component={Link} exact to="/store/issues" label="Issues" {...a11yProps(3)} style={{color:"white",textDecoration:"none"}} />
         </Tabs>
       </AppBar>
      
@@ -85,10 +85,7 @@ export default function SimpleTabs() {
       <NavigationTab value={value} index={3}>
         <Issues />
       </NavigationTab>
-   
-     
-      
-     
+    
     </div>
   );
 }

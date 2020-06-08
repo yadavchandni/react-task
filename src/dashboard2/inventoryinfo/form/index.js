@@ -89,7 +89,7 @@ export default function Form() {
         </div>
         <br></br>
             <div className="row">
-                {/* sku section */}
+                {/*========================================= sku section =========================================*/}
                 <div className="col-md-4">
                     <div className="form-group bmd-form-group">
                         <label className="bmd-label-floating">Product Name</label>
@@ -105,7 +105,7 @@ export default function Form() {
                             
                       </div>
                   </div>
-                  {/* barcode */}
+                  {/*========================================= barcode =========================================*/}
                 <div className="col-md-4">
                     <label className="bmd-label-floating">Barcode *:</label>
                         <Autocomplete
@@ -142,7 +142,7 @@ export default function Form() {
             </div>
             <br></br>
             <div className="row">   
-             {/* unit section */}
+             {/*========================================= unit section =========================================*/}
               <div className="col-md-4 ">
                 <label className="bmd-label-floating">Units *:</label>             
                 <div className="input-group-prepend">
@@ -167,7 +167,7 @@ export default function Form() {
                   </div>
               </div>
 
-              {/* Brands section*/}
+              {/*========================================= Brands section =========================================*/}
                 <div className="col-md-4 ml-1">
                 <div className="form-group bmd-form-group">
                   <label className="bmd-label-floating">Brands *:</label>             
@@ -196,7 +196,7 @@ export default function Form() {
             <br></br>
            
             <div className="row">
-                {/* category */}
+                {/*========================================= category =========================================*/}
                 <div className="col-md-4">
                     <div className="form-group bmd-form-group">
                     <label className="bmd-label-floating">Category*:</label>
@@ -232,7 +232,7 @@ export default function Form() {
                           />
                       </div>
                   </div>
-                   {/* sub-category */}
+                   {/*========================================= sub-category ========================================= */}
                   <div className="col-md-4">
                       <div className="form-group bmd-form-group">
                       <label className="bmd-label-floating">Sub-Category *:</label>                              
@@ -252,7 +252,7 @@ export default function Form() {
                       ></Autocomplete>  
                       </div>
                   </div>
-                 {/* bussiness section */}
+              {/*   =========================================bussiness section =========================================*/}
                 <div className="col-md-4">
                     <label className="bmd-label-floating">Bussineess *:</label>
                     <InfoIcon className="fa fa-info-circle" className="icon-superscript"  />
@@ -270,7 +270,7 @@ export default function Form() {
                  </div>
             </div>
             <br></br>
-            {/* check box */}
+         {/*   =========================================check box =========================================*/}
             <div className="row">                
                 <div className="col-md-4">
                     <div className="form-group bmd-form-group">
@@ -290,7 +290,7 @@ export default function Form() {
                       </div>
                   </div>
                  
-                   {/* Alert quantity*/}
+                   {/*========================================= Alert quantity =========================================*/}
                    <br></br>
                   <div className="col-md-4">
                       <div className="form-group bmd-form-group">
@@ -322,7 +322,7 @@ export default function Form() {
                       </div>
                   </div>
                  
-                   {/* not for seeling*/}
+                   {/*======================== not for seeling=====================================*/}
                    <br></br>
                   <div className="col-md-4">
                       <div className="form-group bmd-form-group">
@@ -334,7 +334,7 @@ export default function Form() {
                   </div>                                        
             </div>
             <div className="row"> 
-                {/* weight */}
+             {/*   =========================================weight========================================= */}
                 <div className="col-md-4">
                     <div className="form-group bmd-form-group">
                     <label className="bmd-label-floating">Weight</label>
@@ -345,7 +345,7 @@ export default function Form() {
             </div>
             <br></br>
             <div className="row"> 
-             {/* Custom field */}
+          {/*   =========================================Custom field =========================================*/}
                 <div className="col-md-3">
                     <div className="form-group bmd-form-group">
                         <label className="bmd-label-floating">Custom field1</label>                            
@@ -382,7 +382,7 @@ export default function Form() {
                   </div> 
               
             </div>
-                  {/* third section application */}
+               {/*   =========================================third section application =========================================*/}
                   <hr className="new4" />
 
           <br></br>
@@ -422,7 +422,7 @@ export default function Form() {
                           />
                 </div>                        
             </div>
-            {/* selling price type tax */}
+         {/*   =========================================selling price type tax =========================================*/}
             <div className="col-md-4">
                 <div className="form-group bmd-form-group">
                   <label className="bmd-label-floating">Selling Price Type Tax*:</label>
@@ -442,9 +442,9 @@ export default function Form() {
             </div>
           </div>
           <br></br>
-          {/* Divider bar */}
+          {/*========================================= Divider bar =========================================*/}
           <div className="row appilacable-divider-bar" >                                          
-            {/* product size type tax */}
+            {/*========================================= product size type tax ========================================= */}
             <div className="col-md-4">              
                <label className="bmd-label-floating " style={{color:"white"}}>Default Purchase Price*:</label>                                      
             </div>
@@ -459,9 +459,9 @@ export default function Form() {
             </div>
           </div>
           <br></br>
-          {/* tax section  */}
+          {/*========================================= tax section  =========================================*/}
           <div className="row">                                          
-            {/* product size type tax */}
+            {/*========================================= product size type tax =========================================*/}
             <div className="col-md-2">
                 <div className="form-group bmd-form-group">
                   <label className="bmd-label-floating">Exc Tax*:</label>

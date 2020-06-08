@@ -66,13 +66,13 @@ export default function SimpleTabs() {
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-           {/* back to home button  */}
+           {/*=================== back to home button ============================ */}
            <Button>
               <Link to={'/'} ><ArrowBackIcon className="back-button-icon" /></Link>
             </Button>
-          <Tab label="Analytics" {...a11yProps(1)} />
-          <Tab label="Users" {...a11yProps(2)} />
-          <Tab label="Isuues" {...a11yProps(3)} />
+          <Tab component={Link}  label="Analytics" {...a11yProps(1)} />
+          <Tab component={Link} label="Users" {...a11yProps(2)} />
+          <Tab component={Link}  label="Isuues" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <NavigationTab value={value} index={1}>

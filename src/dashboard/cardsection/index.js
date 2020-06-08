@@ -13,9 +13,7 @@ import './cardsection.css';
 import Barchart from '../barchart/barchart';
 import data from '../barchart/data.json';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import StoreInfo from '../../dashboard2/Storeinfo';
-import InventoryInfo from '../../dashboard2/inventoryinfo/form/index';
-import UsersInfo from '../../dashboard2/UsersInfo/users/index';
+
 export default class cardsection extends Component {
     render() {
         return (
@@ -27,9 +25,7 @@ export default class cardsection extends Component {
                 <br></br>
                 <div className="row" >                
                     <div className="form-group col-md-12" >                                       
-                          <div className="row">   
-                             {/* Router and Link */}
-                             {/* <Router> */}
+                          <div className="row">                            
                             <div className="col-lg-4 col-md-6 col-sm-6">
                               <div className="card card-stats">
                                 <div className="card-header card-header-warning card-header-icon" >
@@ -43,14 +39,11 @@ export default class cardsection extends Component {
                               </div>
                             </div>
                             {/* Switch  */}
-                              <div>
-                                  {/* <Switch>              
-                                      <Route path='/StoreInfo' component={StoreInfo} />            
-                                  </Switch> */}
+                              <div>                           
                               </div>    
-                            {/* </Router> */}
-                            {/* inventory info router */}
-                            {/* <Router> */}
+                       
+                            {/*======================= inventory info router =========================*/}
+                           
                             <div className="col-lg-4 col-md-6 col-sm-6">
                               <div className="card card-stats">
                                 <div className="card-header card-header-success card-header-icon" >
@@ -63,14 +56,9 @@ export default class cardsection extends Component {
                                 </div>                                
                               </div>
                             </div>
-                            <div>
-                                  {/* <Switch>              
-                                      <Route path='/InventoryInfo' component={InventoryInfo} />            
-                                  </Switch> */}
-                              </div> 
-                            {/* </Router> */}
-                            {/* users info  */}
-                            {/* <Router> */}
+                            <div>                                
+                              </div>                           
+                            {/*=================================== users info ========================= */}                       
                             <div className="col-lg-4 col-md-6 col-sm-6">
                               <div className="card card-stats">
                                 <div className="card-header card-header-danger card-header-icon" >
@@ -83,15 +71,9 @@ export default class cardsection extends Component {
                                   </h2>
                                 </div>                               
                               </div>
-                            </div>
-                            {/* Switch  */}
-                            <div>
-                                  {/* <Switch>              
-                                      <Route path='/UsersInfo' component={UsersInfo} />            
-                                  </Switch> */}
-                              </div>    
-                            {/* </Router> */}
-                           
+                            </div>                      
+                            <div>                                 
+                              </div>                                                     
                           </div>
                   </div>                 
                 </div>              
@@ -99,7 +81,7 @@ export default class cardsection extends Component {
                 <hr />
                 <br></br>
                 
-                   {/* Barchart */}
+                   {/*============================= Barchart =======================*/}
                    <Barchart data={data} />
               
               </div>

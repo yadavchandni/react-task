@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.css'
+import './style.css';
 
 export default class FindStore extends Component {
     render() {
@@ -10,8 +10,7 @@ export default class FindStore extends Component {
                     <form className="example" action="" >
                         <input type="text" placeholder="Search..." name="search2" />
                         <button type="submit">
-                            <i className="fa fa-search"></i>
-                        
+                            <i className="fa fa-search"></i>                       
                         </button>
                     </form>
                     <br></br><br></br> <br></br><br></br> 
