@@ -8,7 +8,7 @@ import StoreInfo from './dashboard2/Storeinfo';
 import AdminDasboardPanel from './dashboard/index';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Inventory from './dashboard2/inventoryinfo';
-
+import Login from './components/loginpage/index';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +36,8 @@ class App extends React.Component {
 
         <Router>
           <Switch>
-          <Route exact path="/" component={AdminDasboardPanel}></Route>
+          <Route exact path="/" component={Login}></Route>
+          <Route exact path="/home" component={AdminDasboardPanel}></Route>
           <Route path="/store" component={StoreInfo}></Route>
           <Route path="/inventory" component={Inventory}></Route>
           <Route path="/users" component={UsersInfo}></Route>

@@ -156,9 +156,9 @@ export default class AddStoreForm extends Component {
                     {/* find store search bar */}
                     <hr className="new4" />
                     <br></br>
-                    <div className="row">
+                    {/* <div className="row">
                         <FindStoreSearchBar />
-                    </div>
+                    </div> */}
                     </div>
                     </div>
                 </div>

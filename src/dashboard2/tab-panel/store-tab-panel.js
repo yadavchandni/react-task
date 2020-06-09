@@ -14,6 +14,7 @@ import Button from '@material-ui/core/Button';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 // custome css
 import '../tab-panel/back-to-home-button/style.css';
+import Searchbar from '../Storeinfo/findstore/index';
 function NavigationTab(props) {
   const { children, value, index, ...other } = props;
 
@@ -68,11 +69,13 @@ export default function SimpleTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
            {/* back to home button  */}
             <Button>
-              <Link to={'/'} ><ArrowBackIcon className="back-button-icon" /></Link>
+              <Link to={'/home'} ><ArrowBackIcon className="back-button-icon" /></Link>
             </Button>
           <Tab component={Link} exact to="/store/analytics" activeClassName="selectedLink"  strict  label="Analytics" {...a11yProps(1)} style={{color:"white",textDecoration:"none"}} />
          <Tab component={Link} exact to="/store/" label="Store Info" {...a11yProps(2)} style={{color:"white",textDecoration:"none"}} /> 
           <Tab component={Link} exact to="/store/issues" label="Issues" {...a11yProps(3)} style={{color:"white",textDecoration:"none"}} />
+          <Tab component={Link}  to="/store/manageinfo" label="Manageinfo" {...a11yProps(4)} style={{color:"white",textDecoration:"none"}} />
+
         </Tabs>
       </AppBar>
      
@@ -85,7 +88,9 @@ export default function SimpleTabs() {
       <NavigationTab value={value} index={3}>
         <Issues />
       </NavigationTab>
-    
+      <NavigationTab value={value} index={4}>
+        <Searchbar />
+      </NavigationTab>
     </div>
   );
 }

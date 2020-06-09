@@ -6,8 +6,8 @@ import Sidebarsection from './sidebar/sidebar';
 export default class index extends Component {
   render() {
     return (
-      <div>       
-        <div>
+      <div className="row">       
+        <div className="col-md-12">
             {/* sidebar section  */}
             <Sidebarsection />
             

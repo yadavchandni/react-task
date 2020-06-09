@@ -17,16 +17,16 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 export default class cardsection extends Component {
     render() {
         return (
-            <div>                 
+            <div className="row main">                 
             <main className="page-content" style={{float:"left",backgroundColor:"#efefef",paddingLeft:"2px"}}>
-              <div className="container-fluid main-right-contain" >
+              <div className="col-md-12" >
                 <h2>Admin Panel</h2>
                 <hr />
                 <br></br>
                 <div className="row" >                
                     <div className="form-group col-md-12" >                                       
                           <div className="row">                            
-                            <div className="col-lg-4 col-md-6 col-sm-6">
+                            <div className="col-lg-4 col-md-8 col-sm-6">
                               <div className="card card-stats">
                                 <div className="card-header card-header-warning card-header-icon" >
                                 <div className="card-icon"  >                                   
@@ -37,11 +37,8 @@ export default class cardsection extends Component {
                                   </h3>                                
                                 </div>                                                           
                               </div>
-                            </div>
-                            {/* Switch  */}
-                              <div>                           
-                              </div>    
-                       
+                            </div>                        
+                              
                             {/*======================= inventory info router =========================*/}
                            
                             <div className="col-lg-4 col-md-6 col-sm-6">
@@ -56,8 +53,7 @@ export default class cardsection extends Component {
                                 </div>                                
                               </div>
                             </div>
-                            <div>                                
-                              </div>                           
+                                                      
                             {/*=================================== users info ========================= */}                       
                             <div className="col-lg-4 col-md-6 col-sm-6">
                               <div className="card card-stats">
